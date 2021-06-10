@@ -28,7 +28,7 @@ import javax.swing.table.JTableHeader;
 
 import getsqlconnection.ConnectionProvider;
 import loginsystem.DatabasePage;
-import net.proteanit.sql.DbUtils;
+//import net.proteanit.sql.DbUtils;
 
 public class AllQuestions extends JFrame {
 	

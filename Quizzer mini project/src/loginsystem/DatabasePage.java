@@ -1,8 +1,10 @@
 package loginsystem;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,11 +13,13 @@ import java.awt.event.MouseListener;
 
 import javax.swing.Action;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import database.AddNewQuestions;
 import database.AllQuestions;
@@ -29,16 +33,18 @@ public class DatabasePage implements ActionListener {
 	public static int open=0;
 	JFrame dataBaseFrame = new JFrame("Database Page");
 	JLabel label = new JLabel();
-
+	JLabel iconLabel = new JLabel();
+JLabel imagePanel = new JLabel();
 	public DatabasePage ( String userID){
 		//C:\Users\Rohit\git\Quizer\APNA GROUP PROJECT\src\Images
-		ImageIcon addQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\plus.png");
-		ImageIcon updateQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\exchange.png");
-		ImageIcon allQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\select-all.png");
-		ImageIcon deleteQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\remove.png");
-		ImageIcon logoutIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\logout.png");
-		ImageIcon exitIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\exit.png");
-		ImageIcon studentResultIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\exam.png");
+		ImageIcon addQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\plus.png");
+		ImageIcon updateQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\exchange.png");
+		ImageIcon allQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\select-all.png");
+		ImageIcon deleteQueIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\remove.png");
+		ImageIcon logoutIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\logout.png");
+		ImageIcon exitIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\exit.png");
+		ImageIcon studentResultIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\exam.png");
+		ImageIcon image = new ImageIcon("C:\\Users\\Rohit\\Desktop\\New Folder\\three.jpg");//C:\Users\Rohit\Desktop\New Folder
 	/*************************************label*******************************/
 		label.setText("Add new Questions");
 		label.setFont(new Font(null, Font.PLAIN , 25));
@@ -46,6 +52,17 @@ public class DatabasePage implements ActionListener {
 		/*************************menuBar***********************************/
 		JMenuBar menuBar = new JMenuBar();
 		Font myFont = new Font("Arial", Font.BOLD, 18);
+		/*********************************ImagePanel*************************************/
+		//iconLabel.setVerticalAlignment(JLabel.CENTER);
+		//iconLabel.setHorizontalTextPosition(JLabel.RIGHT);
+		Image scaleImage = image.getImage().getScaledInstance(1300, 630, Image.SCALE_DEFAULT);
+		image = new ImageIcon(scaleImage);
+		//iconLabel.setBounds(0, 100, 500, 500);
+		iconLabel.setIcon(image);
+		
+		
+		
+		//*******************
 		
 /**************************Add new Questions**********************************/
 	
@@ -425,6 +442,8 @@ public class DatabasePage implements ActionListener {
 		
 		/*************************dataBaseFrame*************************************/
 		dataBaseFrame.setJMenuBar(menuBar);
+		dataBaseFrame.add(iconLabel);
+		
 		dataBaseFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		dataBaseFrame.setSize(1300, 700);
 		dataBaseFrame.setLocationRelativeTo(null);

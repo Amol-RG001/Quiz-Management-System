@@ -1,4 +1,4 @@
-package loginsystem;
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -23,19 +23,18 @@ import loginsystem.DatabasePage;
 import quizsystem.OptionsPage;
 
 
-	public class LoginPage implements ActionListener {
+	public class MultiUserLogin implements ActionListener {
 		
 		public static void main(String[] args) {
-			
-			 new LoginPage();
+			// TODO Auto-generated method stub
+			MultiUserLogin o = new MultiUserLogin();
 
 		}
 
 		JFrame frame = new JFrame("Admin Login");
 		JButton loginButton = new JButton("Login");
 		JButton resetButton = new JButton("Reset");
-		JButton backButton = new JButton("Go back");
-		JButton registerButton = new JButton("Sign Up");
+		JButton backButton = new JButton("back");
 		
 		JTextField userIDField = new JTextField();
 		JPasswordField userPasswordField = new JPasswordField();
@@ -46,8 +45,7 @@ import quizsystem.OptionsPage;
 		
 		
 		
-		 public LoginPage() {
-		
+		public MultiUserLogin (){
 			//logininfo  = logininfoReal;
 		
 			userIDLabel.setBounds(50, 100, 75, 25);
@@ -65,7 +63,7 @@ import quizsystem.OptionsPage;
 			resetButton.addActionListener(this);
 			
 			/***********************************backButton*************************************/
-			backButton.setBounds(10, 10, 75, 16);
+			backButton.setBounds(10, 10, 57, 16);
 			backButton.setFocusable(false);
 			backButton.setVerticalAlignment(JButton.CENTER);
 			backButton.setHorizontalAlignment(JButton.CENTER);
@@ -80,31 +78,7 @@ import quizsystem.OptionsPage;
 				}
 			});
 			
-			/***********************************SIGN UP*************************************/
-		registerButton.setBounds(325, 10, 75, 16);
-		registerButton.setFocusable(false);
-		registerButton.setVerticalAlignment(JButton.CENTER);
-		registerButton.setHorizontalAlignment(JButton.CENTER);
-		registerButton.setFont(new Font("Arial", Font.PLAIN, 11));
-		registerButton.setBackground(Color.WHITE);
-		registerButton.addActionListener(new ActionListener() {
-				
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					// TODO Auto-generated method stub
-					registerButtonActionPerformed(e);
-				}
-
-				private void registerButtonActionPerformed(ActionEvent e) {
-					// TODO Auto-generated method stub
-					if(e.getSource()==registerButton) {
-						frame.dispose();
-						new Registration();
-					}
-				}
-			});
 			
-/******************************************************************************************************************/			
 			showPassword.setBounds(125, 180, 125, 25);
 			showPassword.setBackground(Color.CYAN);
 			showPassword.setFocusable(false);
@@ -119,7 +93,6 @@ import quizsystem.OptionsPage;
 			frame.add(loginButton);
 			frame.add(resetButton);
 			frame.add(backButton);
-			frame.add(registerButton);
 			frame.getContentPane().setBackground(Color.CYAN);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.setSize(420, 420);

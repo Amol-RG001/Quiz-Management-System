@@ -22,9 +22,9 @@ public class OptionsPage implements ActionListener {
 	
 	JButton exitButton = new JButton("Exit");
 	//C:\Users\Rohit\git\Quizer\APNA GROUP PROJECT\src\Images
-	ImageIcon adminIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\admin.png");
-	ImageIcon studentIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\student.png");
-	ImageIcon exitIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\exit01.png");
+	ImageIcon adminIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\admin.png");
+	ImageIcon studentIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\student.png");
+	ImageIcon exitIcon = new ImageIcon("C:\\Users\\Rohit\\git\\APNA GROUP PROJECT\\src\\Images\\exit01.png");
 
 	Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
 	Border frameBorder = BorderFactory.createLineBorder(Color.BLACK, 2);

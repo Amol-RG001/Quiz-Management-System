@@ -47,8 +47,8 @@ public class QuizExamStudent extends JFrame implements ActionListener{
 	JLabel pointLabel = new JLabel();
 	JLabel queLabel = new JLabel();
 	JLabel optionsLabel = new JLabel();
-	JLabel welcomeLabel = new JLabel();
-	ImageIcon studentIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quizer\\APNA GROUP PROJECT\\src\\Images\\graduated.png");
+	JLabel welcomeLabel = new JLabel();//C:\Users\Rohit\git\Quiz Management System\Quizzer mini project\src
+	ImageIcon studentIcon = new ImageIcon("C:\\Users\\Rohit\\git\\Quiz Management System\\Quizzer mini project\\src\\graduated.png");
 	
 
 	
@@ -502,7 +502,7 @@ private void submitButtonActionPerformed(ActionEvent e) {
 		}
 		
 		//timer
-		quizAppFrame.setLocationRelativeTo(this);
+		//quizAppFrame.setLocationRelativeTo(this);
 		timer  = new Timer(1000, new ActionListener() {
 			
 			@Override

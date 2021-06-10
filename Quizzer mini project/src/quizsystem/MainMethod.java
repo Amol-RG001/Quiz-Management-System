@@ -9,4 +9,3 @@ public class MainMethod {
 	}
 
 }
-//C:\Users\Rohit\Downloads\openjfx-16_windows-x64_bin-sdk
